@@ -4,7 +4,9 @@ result.value += num
 }
 function result(){
     let result = document.getElementById('input')
-    result.value= eval(result.value)
+   try{ result.value= eval(result.value)}
+   catch(error){alert("Invalid input")
+                  clearresult()}
 }
 function clearresult(){
     let result = document.getElementById('input')
